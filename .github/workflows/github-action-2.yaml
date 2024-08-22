@@ -15,4 +15,4 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
       - run: printenv
-      - run: echo "These are the environment variable with project name {{ env.PROJECT_NAME}} and learning title is {{ env.LEARNING }}"
+      - run: echo "These are the environment variable with project name ${{ env.PROJECT_NAME}} and learning title is ${{ env.LEARNING }}"
