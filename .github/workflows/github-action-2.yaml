@@ -10,6 +10,7 @@ env:
 
 jobs:
   myexamplejob:
+  runs-on: ubuntu-latest
     steps:
       - run: echo "Checkout the repo"
       - name: Checkout Repo
