@@ -1,15 +1,15 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
-jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀    #This is optional one, This will be shown in the list of workflow runs 
+on: [push]    # Here we are specifying the trigger for this workflow. So for this as soon as i push the code to github it will execute
+jobs:     # here we group together all the jobs taht will run in my actions workflow
+  Explore-GitHub-Actions:    # it is a job name, below are the properties of this job
+    runs-on: ubuntu-latest    # here we are configuring the job to run on the latest version on the ubuntu Linux server hosted by github
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4       # this is basically an action that checkout our repository on the runnner, it is recommended that you should use the checkout action anytime 
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
